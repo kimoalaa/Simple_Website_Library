@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Anton&family=Be+Vietnam+Pro:ital,wght@0,300;0,700;1,400&family=Dangrek&family=Fjalla+One&family=Koulen&family=Lalezar&family=Lobster&family=Noto+Kufi+Arabic:wght@400;500;600&family=Noto+Sans+Arabic:wght@500&family=Oleo+Script+Swash+Caps&family=Oxygen:wght@700&family=Pacifico&family=Poppins:wght@500&family=Rakkas&family=Roboto:wght@500&family=Signika+Negative:wght@400;600&family=Staatliches&family=Tilt+Warp&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Arabic', sans-serif;
+}
+/* scroll transition */
+html{
+    scroll-behavior: smooth;
+}
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #555;
+}
+::-webkit-scrollbar-thumb {
+    background: #eee;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+/* styling for general */
+/* start nav */
+.nav{
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+    padding: 10px 0px;
+    transition: all 0.4s ease;
+    box-shadow:0px 0px 10px 0px #555;
+}
+.nav .log{
+    height: 65px;
+}
+.nav .list{
+    list-style: none;
+    display: flex;
+}
+.nav .list li a{
+    padding-left: 50px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'Noto Sans Arabic', sans-serif;
+    transition: 0.4s ease;
+    color: #000;
+}
+.nav .list li a:hover{
+    color: #888;
+}
+/* start home */
+.home{
+    display: flex;
+    background: url("p1.jpg") center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    transition: all 0.5s ease;
+}
+.home::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgb(0,0,0,0.7);
+    transition: 0.4s ease;
+}
+.home .text .a{
+    text-decoration:none;
+    background-color:#fff;
+    color:#000;
+    border-radius:7px;
+    padding:3px 15px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+}
+.home .content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    z-index: 999;
+    text-align: center;
+    padding: 0px 50px;
+}
+.home .content .text{
+    color:#fff;
+    font-size: 30px;
+}
+ /*start books */
+.books{
+    display:flex;
+    justify-content: space-evenly;
+    align-items:center;
+    padding-bottom:200px;
+    padding-top: 150px;
+}
+.books .card .box{
+    border-radius:10px;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    padding:30px 30px;
+    transition:0.4s ease all;
+    cursor: pointer;
+    background-color: #444;
+}
+.books .card .box img{
+    width:400px;
+    border-radius:10px;
+}
+.books .card .box .one{
+    width: 350px;
+    border-radius:10px;
+}
+.books .card .box .txt{
+    font-size:20px;
+    color:#fff;
+    padding-bottom:15px;
+}
+.books .card .box:hover{
+    background-color: teal;
+}
+/* section  over*/
+.over{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    width:100%;
+    padding-bottom:200px;
+}
+.over img{
+    width:500px;
+    border-radius:8px;
+}
+.over p{
+    font-size:25px;
+    font-weight:bold;
+    color:#000;
+    width:50%;
+}
+/* footer */
+footer{
+    width:100%;
+    padding:10px 15px;
+    font-size:20px;
+    color:#fff;
+    background-color:#333;
+    text-align:center;
+}
+
+/* media  */
+@media (min-width:390px) and (max-width:576px){
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+    .nav .log{
+        height: 45px;
+    }
+    .nav .list{
+        display: none;
+    }
+    .home{
+        display: flex;
+        background: url("pexels-element-digital-1370295.jpg") center no-repeat;
+        background-size:cover;
+        height: 100vh;
+        transition: all 0.5s ease;
+    }
+    .home .content .text{
+        color:#fff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    .home .text .a{
+        text-decoration:none;
+        background-color:#fff;
+        color:#000;
+        border-radius:7px;
+        padding:3px 8px;
+        cursor:pointer;
+        font-size:12px;
+        font-weight:500;
+    }
+    .books{
+        display:flex;
+        flex-direction:column ;
+        justify-content: space-around;
+        align-items:center;
+        padding-bottom:200px;
+    }
+    .over{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        padding-bottom:200px;
+        flex-direction: column;
+    }
+    .over img{
+        width:300px;
+        border-radius:8px;
+    }
+    .over p{
+        font-size:20px;
+        font-weight:bold;
+        color:#000;
+        width: 80%;
+        height: 70%;
+        padding-bottom:50px ;
+    }
+}
